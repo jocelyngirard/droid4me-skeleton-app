@@ -14,7 +14,6 @@
   <string name="unavailableItem">Impossible de récupérer correctement l\'élément\u00A0: cet écran ne peut être affiché correctement, désolé.\n\nSVP, appuyez sur la touche \"OK\".</string>
 
   <string name="SkeletonSplashScreen_dialogMessage_noSdCard">Aucune carte SD n\'est couramment accessible sur le terminal\u00A0: l\'application ne peut démarrer\u00A0!</string>
-  <string name="SkeletonSplashScreen_smartnsoftMoto">CRÉATEURS D\'APPLICATIONS MOBILES</string>
 
   <string name="Settings_version">Version</string>
 

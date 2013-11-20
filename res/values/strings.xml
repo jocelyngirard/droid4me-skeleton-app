@@ -14,7 +14,6 @@
   <string name="unavailableItem">Cannot retrieve the element properly: this screen cannot be displayed properly.\n\nPlease, press the \"OK\" button.</string>
 
   <string name="SkeletonSplashScreen_dialogMessage_noSdCard">No SD card is currently mounted/available on the device: the application cannot start!</string>
-  <string name="SkeletonSplashScreen_smartnsoftMoto">MOBILE APPLICATIONS CREATION</string>
 
   <string name="Settings_version">Version</string>
 

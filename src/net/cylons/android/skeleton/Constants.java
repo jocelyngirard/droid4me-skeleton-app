@@ -41,7 +41,7 @@ public abstract class Constants
   /**
    * The e-mail that will receive error reports.
    */
-  public static final String REPORT_LOG_RECIPIENT_EMAIL = "android@smartnsoft.com";
+  public static final String REPORT_LOG_RECIPIENT_EMAIL = "jocelyn@erioxyde.com";
 
   /**
    * The name of the folder which will be used to store contents related to the application.
