@@ -104,6 +104,11 @@
       <artifactId>droid4me.ext</artifactId>
       <version>2.2.4</version>
     </dependency>
+    <dependency>
+      <groupId>android.support</groupId>
+      <artifactId>compatibility-v4</artifactId>
+      <version>18</version>
+    </dependency>
   </dependencies>
 
   <build>
