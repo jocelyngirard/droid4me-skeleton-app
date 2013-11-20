@@ -3,11 +3,12 @@
 
   <style
     name="Theme.Skeleton"
-    parent="android:Theme.Light"
+    parent="android:Theme.Holo.Light"
   >
-    <!-- The "Android 2.0" title bar -->
+    <!-- The "Android 2.0" title bar
     <item name="android:windowTitleBackgroundStyle">@style/titleBar</item>
     <item name="android:windowTitleSize">@dimen/titleBarHeight</item>
+     -->
   </style>
 
   <style
