@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>net.cylons.android.skeleton</groupId>
+  <artifactId>Skeleton</artifactId>
+  <version>0.1</version>
+  <packaging>apk</packaging>
+  <name>Skeleton</name>
+  <description>The Android application "Skeleton"</description>
+  <url><![CDATA[https://play.google.com/store/apps/details?id=net.cylons.android.skeleton]]></url>
+  <inceptionYear>2013</inceptionYear>
+
+  <parent>
+    <groupId>com.smartnsoft</groupId>
+    <artifactId>distribution</artifactId>
+    <version>1.0</version>
+  </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <key.store.password></key.store.password>
+    <key.alias.password></key.alias.password>
+  </properties>
+
+  <licenses>
+    <license>
+      <name><![CDATA[Copyright Smart&Soft]]></name>
+    </license>
+  </licenses>
+
+  <developers>
+    <developer>
+      <id>jocelyn.girard</id>
+      <name>Édouard</name>
+      <email>jocelyn@erioxyde.com</email>
+      <organization><![CDATA[Smart&Soft]]></organization>
+      <organizationUrl>http://www.smartnsoft.com</organizationUrl>
+      <roles>
+        <role>architect</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:smartnsoft/Skeleton.git</connection>
+    <developerConnection>scm:git:git@github.com:smartnsoft/Skeleton.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
+
+  <issueManagement>
+    <system>JIRA</system>
+    <url>https://smartnsoft.atlassian.net/browse/</url>
+  </issueManagement>
+
+  <ciManagement>
+    <system>Teamcity</system>
+    <url>http://developer.smartnsoft.com:8111</url>
+  </ciManagement>
+
+  <reporting>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-changes-plugin</artifactId>
+        <version>2.8</version>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <report>jira-report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
+      </plugin>
+    </plugins>
+  </reporting>
+
+  <dependencies>
+    <dependency>
+      <groupId>android</groupId>
+      <artifactId>android</artifactId>
+      <version>4.2_r1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.google.android.annotations</groupId>
+      <artifactId>annotations</artifactId>
+      <version>21.0.1</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>android.support</groupId>
+      <artifactId>compatibility-v4</artifactId>
+      <version>13</version>
+    </dependency>
+    <dependency>
+      <groupId>ch.acra</groupId>
+      <artifactId>acra</artifactId>
+      <version>4.3.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.smartnsoft</groupId>
+      <artifactId>droid4me</artifactId>
+      <version>2.2.4</version>
+    </dependency>
+    <dependency>
+      <groupId>com.smartnsoft</groupId>
+      <artifactId>droid4me.ext</artifactId>
+      <version>2.2.2</version>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.0</version>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+          <excludes>
+            <exclude>**/ActionBar.java</exclude>
+          </excludes>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-resources-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>initialize</phase>
+            <goals>
+              <goal>resources</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+        <artifactId>android-maven-plugin</artifactId>
+        <version>3.6.0</version>
+        <inherited>true</inherited>
+        <extensions>true</extensions>
+        <configuration>
+          <sdk>
+            <platform>18</platform>
+          </sdk>
+        </configuration>
+        <executions>
+          <execution>
+            <id>alignApk</id>
+            <phase>package</phase>
+            <goals>
+              <goal>zipalign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>sign</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jarsigner-plugin</artifactId>
+            <version>1.2</version>
+            <executions>
+              <execution>
+                <id>signing</id>
+                <goals>
+                  <goal>sign</goal>
+                </goals>
+                <phase>package</phase>
+                <inherited>true</inherited>
+                <configuration>
+                  <archiveDirectory></archiveDirectory>
+                  <includes>
+                    <include>target/*.apk</include>
+                  </includes>
+                  <keystore>xxx.keystore</keystore>
+                  <storepass>${key.store.password}</storepass>
+                  <alias>Skeleton</alias>
+                  <keypass>${key.alias.password}</keypass>
+                  <arguments>
+                    <argument>-sigalg</argument>
+                    <argument>MD5withRSA</argument>
+                    <argument>-digestalg</argument>
+                    <argument>SHA1</argument>
+                  </arguments>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>com.jayway.maven.plugins.android.generation2</groupId>
+            <artifactId>android-maven-plugin</artifactId>
+            <inherited>true</inherited>
+            <configuration>
+              <zipalign>
+                <skip>false</skip>
+              </zipalign>
+              <sign>
+                <debug>false</debug>
+              </sign>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>

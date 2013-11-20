@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <!-- The "Android 2.0" title bar -->
+  <dimen name="titleBarHeight">45dip</dimen>
+  <dimen name="titleBarText">18dip</dimen>
+  <dimen name="titleBarMargin">12dip</dimen>
+
+  <dimen name="paddingSmall">3dip</dimen>
+  <dimen name="paddingMedium">5dip</dimen>
+  <dimen name="paddingLarge">10dip</dimen>
+  <dimen name="paddingXLarge">15dip</dimen>
+  <dimen name="paddingXXLarge">20dip</dimen>
+  <dimen name="paddingXXXLarge">30dip</dimen>
+
+</resources>

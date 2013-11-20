@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <string name="applicationName">Skeleton</string>
+  <string name="applicationDescription">...</string>
+
+  <string name="problem">Problème</string>
+  <string name="unhandledProblem">Vous venez de découvrir un bug dans l\'application, veuillez nous en excuser\u00A0!\n\nAuriez-vous l\'amabilité de nous en faire part, SVP ? Merci.</string>
+  <string name="dialogButton_unhandledProblem">Envoyer</string>
+  <string name="progressDialogMessage_unhandledProblem">Récupération et calcul de la trace de l\'application&#8230;</string>
+  <string name="unavailableService">Service indisponible\u00A0: l\'écran ne peut être affiché correctement.\n\nSVP, appuyez sur la touche \"OK\".</string>
+  <string name="connectivityProblem">Votre terminal n\'est actuellement pas connecté à Internet, ou bien votre connexion est très mauvaise.\n\nVérifiez votre connexion et réessayez, SVP.</string>
+  <string name="connectivityProblemRetry">Votre terminal n\'est actuellement pas connecté à Internet, ou bien votre connexion est très mauvaise.\n\nSouhaitez-vous réessayer ?</string>
+  <string name="unavailableItem">Impossible de récupérer correctement l\'élément\u00A0: cet écran ne peut être affiché correctement, désolé.\n\nSVP, appuyez sur la touche \"OK\".</string>
+
+  <string name="SkeletonSplashScreen_dialogMessage_noSdCard">Aucune carte SD n\'est couramment accessible sur le terminal\u00A0: l\'application ne peut démarrer\u00A0!</string>
+  <string name="SkeletonSplashScreen_smartnsoftMoto">CRÉATEURS D\'APPLICATIONS MOBILES</string>
+
+  <string name="Settings_version">Version</string>
+
+  <string name="Home_menu_settings">Réglages</string>
+  <string name="Home_menu_about">À propos</string>
+
+</resources>
