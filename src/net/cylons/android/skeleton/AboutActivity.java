@@ -1,16 +1,10 @@
 package net.cylons.android.skeleton;
 
-import java.io.IOException;
-import java.io.InputStream;
-
-import org.apache.http.protocol.HTTP;
-
-import android.webkit.WebView;
 import net.cylons.android.skeleton.app.SkeletonActivityAggregate;
+import android.webkit.WebView;
 
 import com.smartnsoft.droid4me.LifeCycle.BusinessObjectsRetrievalAsynchronousPolicyAnnotation;
 import com.smartnsoft.droid4me.app.SmartActivity;
-import com.smartnsoft.droid4me.ws.WebServiceCaller;
 
 /**
  * The "about" screen.
@@ -22,8 +16,6 @@ import com.smartnsoft.droid4me.ws.WebServiceCaller;
 public final class AboutActivity
     extends SmartActivity<SkeletonActivityAggregate>
 {
-
-  private String content;
 
   private WebView webView;
 
@@ -39,20 +31,10 @@ public final class AboutActivity
   public void onRetrieveBusinessObjects()
       throws BusinessObjectUnavailableException
   {
-    final InputStream inputStream = getResources().openRawResource(R.raw.about);
-    try
-    {
-      content = WebServiceCaller.getString(inputStream, HTTP.UTF_8);
-    }
-    catch (IOException exception)
-    {
-      throw new BusinessObjectUnavailableException(exception);
-    }
   }
 
   public void onFulfillDisplayObjects()
   {
-    webView.loadDataWithBaseURL("file:///android_asset/", content, "text/html", HTTP.UTF_8, null);
   }
 
   public void onSynchronizeDisplayObjects()
