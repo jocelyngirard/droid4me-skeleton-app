@@ -3,7 +3,7 @@
 
   <style
     name="Theme.Skeleton"
-    parent="android:Theme.Holo.Light"
+    parent="android:Theme.Holo.Light.DarkActionBar"
   >
     <!-- The "Android 2.0" title bar
     <item name="android:windowTitleBackgroundStyle">@style/titleBar</item>

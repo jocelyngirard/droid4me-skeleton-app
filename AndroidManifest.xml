@@ -30,7 +30,7 @@
     android:icon="@drawable/icon"
     android:label="@string/applicationName"
     android:description="@string/applicationDescription"
-    android:theme="@style/Theme.Skeleton.NoTitle"
+    android:theme="@style/Theme.Skeleton"
     android:allowBackup="false"
     android:hardwareAccelerated="true"
   >
@@ -41,6 +41,7 @@
     <activity
       android:name=".SkeletonSplashScreenActivity"
       android:configChanges="orientation|keyboardHidden|screenLayout"
+      android:theme="@style/Theme.Skeleton.NoTitle"
       android:alwaysRetainTaskState="true"
       android:excludeFromRecents="true"
       android:multiprocess="true"
