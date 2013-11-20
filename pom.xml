@@ -30,17 +30,17 @@
 
   <licenses>
     <license>
-      <name><![CDATA[Copyright Smart&Soft]]></name>
+      <name>GNU Lesser General Public License</name>
+      <url>http://www.gnu.org/licenses/lgpl.html</url>
+      <distribution>repo</distribution>
     </license>
   </licenses>
 
   <developers>
     <developer>
       <id>jocelyn.girard</id>
-      <name>Édouard</name>
+      <name>Jocelyn Girard</name>
       <email>jocelyn@erioxyde.com</email>
-      <organization><![CDATA[Smart&Soft]]></organization>
-      <organizationUrl>http://www.smartnsoft.com</organizationUrl>
       <roles>
         <role>architect</role>
         <role>developer</role>
@@ -49,20 +49,10 @@
   </developers>
 
   <scm>
-    <connection>scm:git:git@github.com:smartnsoft/Skeleton.git</connection>
-    <developerConnection>scm:git:git@github.com:smartnsoft/Skeleton.git</developerConnection>
+    <connection>scm:git:git@github.com:eri</connection>
+    <developerConnection>scm:git:git@github.com:eri</developerConnection>
     <tag>HEAD</tag>
   </scm>
-
-  <issueManagement>
-    <system>JIRA</system>
-    <url>https://smartnsoft.atlassian.net/browse/</url>
-  </issueManagement>
-
-  <ciManagement>
-    <system>Teamcity</system>
-    <url>http://developer.smartnsoft.com:8111</url>
-  </ciManagement>
 
   <reporting>
     <plugins>
@@ -112,7 +102,7 @@
     <dependency>
       <groupId>com.smartnsoft</groupId>
       <artifactId>droid4me.ext</artifactId>
-      <version>2.2.2</version>
+      <version>2.2.4</version>
     </dependency>
   </dependencies>
 
